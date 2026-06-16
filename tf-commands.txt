@@ -1,0 +1,7 @@
+1. terraform init (to init the folder )
+
+2. terraform plan ( its show the plan before execute )
+
+3. terraform apply ( to apply the all resources )
+
+4. terraform validate ( check the terraform code is right or wrong )
