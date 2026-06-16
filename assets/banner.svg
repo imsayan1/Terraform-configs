@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0A12"/>
+      <stop offset="55%" stop-color="#1C1428"/>
+      <stop offset="100%" stop-color="#2A1B3D"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#8C52FF"/>
+    </linearGradient>
+    <pattern id="diagLines" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#F4F2FA" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="280" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#topBar)"/>
+  <rect x="600" y="4" width="600" height="276" fill="url(#diagLines)"/>
+
+  <!-- Terminal panel -->
+  <rect x="40" y="40" width="580" height="200" rx="10" fill="#120F1C" stroke="#8C52FF" stroke-opacity="0.35" stroke-width="1.5"/>
+  <line x1="40" y1="74" x2="620" y2="74" stroke="#F4F2FA" stroke-opacity="0.08" stroke-width="1"/>
+
+  <circle cx="64" cy="57" r="5" fill="#4B4458"/>
+  <circle cx="80" cy="57" r="5" fill="#635A73"/>
+  <circle cx="96" cy="57" r="5" fill="#8C52FF"/>
+  <text x="114" y="61" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#F4F2FA" fill-opacity="0.75">main.tf</text>
+  <text x="600" y="61" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#F4F2FA" fill-opacity="0.4">~/AWS-Terraform</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+    <text x="64" y="104"><tspan fill="#FF9900">resource</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> </tspan><tspan fill="#2DD4BF">"aws_vpc"</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> </tspan><tspan fill="#B79CFF">"main"</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> {</tspan></text>
+    <text x="64" y="128"><tspan fill="#B79CFF">  cidr_block</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> = </tspan><tspan fill="#2DD4BF">"10.0.0.0/16"</tspan></text>
+    <text x="64" y="152"><tspan fill="#F4F2FA" fill-opacity="0.6">}</tspan></text>
+    <text x="64" y="176"><tspan fill="#FF9900">resource</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> </tspan><tspan fill="#2DD4BF">"aws_instance"</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> </tspan><tspan fill="#B79CFF">"app"</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> {</tspan></text>
+    <text x="64" y="200"><tspan fill="#B79CFF">  instance_type</tspan><tspan fill="#F4F2FA" fill-opacity="0.6"> = </tspan><tspan fill="#2DD4BF">"t2.micro"</tspan></text>
+    <text x="64" y="224"><tspan fill="#F4F2FA" fill-opacity="0.6">}</tspan></text>
+  </g>
+
+  <!-- Title -->
+  <text x="660" y="92" font-family="'Arial Black', Helvetica, sans-serif" font-weight="900" font-size="34" letter-spacing="0.5">
+    <tspan fill="#FF9900">AWS</tspan>
+    <tspan fill="#F4F2FA" fill-opacity="0.45"> &#215; </tspan>
+    <tspan fill="#8C52FF">TERRAFORM</tspan>
+  </text>
+  <text x="660" y="120" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#F4F2FA" fill-opacity="0.55">Infrastructure as Code — the repeatable way</text>
+
+  <!-- Node map -->
+  <g>
+    <line x1="700" y1="190" x2="1120" y2="190" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.5"/>
+
+    <circle cx="700" cy="190" r="20" fill="#1B1430" stroke="#2DD4BF" stroke-width="2"/>
+    <text x="700" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#2DD4BF">VPC</text>
+    <text x="700" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#F4F2FA" fill-opacity="0.5">Network</text>
+
+    <circle cx="840" cy="190" r="20" fill="#1B1430" stroke="#2DD4BF" stroke-width="2"/>
+    <text x="840" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#2DD4BF">EC2</text>
+    <text x="840" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#F4F2FA" fill-opacity="0.5">Compute</text>
+
+    <circle cx="980" cy="190" r="20" fill="#1B1430" stroke="#2DD4BF" stroke-width="2"/>
+    <text x="980" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#2DD4BF">S3</text>
+    <text x="980" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#F4F2FA" fill-opacity="0.5">Storage</text>
+
+    <circle cx="1120" cy="190" r="20" fill="#1B1430" stroke="#2DD4BF" stroke-width="2"/>
+    <text x="1120" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="10" font-weight="700" fill="#2DD4BF">WEB</text>
+    <text x="1120" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#F4F2FA" fill-opacity="0.5">Website</text>
+  </g>
+
+  <!-- Colophon -->
+  <line x1="40" y1="254" x2="1160" y2="254" stroke="#F4F2FA" stroke-opacity="0.12" stroke-width="1"/>
+  <text x="40" y="270" font-family="Consolas, monospace" font-size="11" fill="#F4F2FA" fill-opacity="0.4" letter-spacing="1">AWS-TERRAFORM</text>
+  <text x="1160" y="270" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#F4F2FA" fill-opacity="0.4">build · automate · deploy · scale</text>
+</svg>
